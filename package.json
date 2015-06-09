@@ -1,0 +1,32 @@
+{
+  "name": "permutations",
+  "version": "0.0.0",
+  "description": "Angular Permutation Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "angularjs",
+    "homesdotcom"
+  ],
+  "author": "ashley.hill@homes.com",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.3.16",
+    "browserify": "^10.2.4",
+    "hapi": "^8.6.1",
+    "lodash": "^3.9.3",
+    "minimist": "^1.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.5",
+    "merge-stream": "^0.1.7",
+    "rimraf": "^2.4.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.2"
+  }
+}
