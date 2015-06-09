@@ -1,0 +1,31 @@
+#
+# .gitignore
+#
+
+# Build and Release Folders
+/.tmp/
+/client-built/
+/.cachebust
+/dist/
+.sass-cache/
+
+
+# Package Manager Modules
+/client/scripts/node_modules/bower_components/
+/node_modules/
+
+# Project property files
+.DS_STORE
+.DS_Store
+.idea/workspace.xml
+*.sublime-workspace
+
+
+/.git.*/
+/.gitignore.*
+/log/
+/npm-debug.log
+
+vendor/
+.bundle/
+coverage*
