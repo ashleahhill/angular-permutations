@@ -1,5 +1,7 @@
-var gulp = require('gulp');
-var karma = require('karma').server;
+var gulp = require('gulp'),
+karma = require('karma').server,
+path = require('path');
+
 
 module.exports = function (gulp) {
 /**
@@ -7,7 +9,7 @@ module.exports = function (gulp) {
  */
 gulp.task('test', function (done) {
   karma.start({
-    configFile: __dirname + '/config/karma.conf.js',
+    configFile: __dirname + '/../config/karma.conf.js',
     singleRun: true
   }, done);
 });

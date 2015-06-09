@@ -5,18 +5,18 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '../',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['browserify', 'mocha'],
 
 
     // list of files / patterns to load in the browser
     files: [
       'client/js/*.js',
-      'lib/compontents/test/*.js',
+      'lib/components/test/*.js',
       'lib/components/**/*.js',
       'lib/components/**/*_test.js'
     ],
@@ -31,8 +31,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        'client/js/*.js' : ['browserify']
+        'client/js/*.js' : ['browserify'],
+        'lib/components/**/*.js' : ['browserify'],
     },
+    plugins: [
+'karma-browserify',
+'karma-mocha',
+'karma-phantomjs-launcher'
+    ],
         browserify: {
             debug: true
         },
