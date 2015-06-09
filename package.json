@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Angular Permutation Calculator",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ashleahhill/angular-permutations"
+  },
   "scripts": {
     "test": "test"
   },
