@@ -1,3 +1,5 @@
+'use strict';
+
 var Path = require('path');
 
 exports.register = function (server, options, next) {
