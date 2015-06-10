@@ -1,28 +1,32 @@
 'use strict';
 
-var watchify = require('watchify');
-var browserify = require('browserify');
-var gulp = require('gulp');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var gutil = require('gulp-util');
-var sourcemaps = require('gulp-sourcemaps');
-var assign = require('lodash').assign;
+var watchify = require('watchify'),
+  browserify = require('browserify'),
+  gulp = require('gulp'),
+  source = require('vinyl-source-stream'),
+  buffer = require('vinyl-buffer'),
+  gutil = require('gulp-util'),
+  sourcemaps = require('gulp-sourcemaps'),
+  assign = require('lodash').assign,
+  customOpts,
+  opts,
+  b;
 
-// add custom browserify options here
-var customOpts = {
-  entries: ['./client/js/main.js'],
-  debug: true
-};
-var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts));
+// https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
+  // add custom browserify options here
+  customOpts = {
+    entries: ['./client/js/main.js'],
+    debug: true
+  };
+  opts = assign({}, watchify.args, customOpts);
+
+  b = watchify(browserify(opts));
 
 
 module.exports = function (gulp) {
-  // add transformations here
-// i.e. b.transform(coffeeify);
 
   gulp.task('javascript', bundle); // so you can run `gulp js` to build the file
+
   b.on('update', bundle); // on any dep update, runs the bundler
   b.on('log', gutil.log); // output build logs to terminal
 

@@ -1,44 +1,16 @@
-# HELLO
+# Angular Permutations and Combinations 
 
-## git@github.com:ashleahhill/angular-permutations.git
+[![Floobits Status](https://floobits.com/ashleahhill/permutations.svg)](https://floobits.com/ashleahhill/permutations/redirect)
+
+[angular-permutations on github](https://github.com/ashleahhill/angular-permutations)
 
 
 ## Usage
 
 ```bash
-
-$ node server # start
-$ gulp
-
+$ gulp # build and start server
+$ gulp test
+$ gulp test-dev # test and watch for changes
+$ jshint --exclude node_modules/ . # jshint
+$ node node_modules/jscs/bin/jscs -c .jscsrc ./ # check code style
 ```
-Mister Mister
-Sephiroth is my bishie.
-
-# What did the fox say.
-
-HELLO
-TRY IT NOOWOWWWWWWWW
-
-
-gdfsadfdf
-
-hey guysssssss
-
-asdfh
-
-banana
-banana
-
-hey dude
-heyyyyy dudeee *slide guitar* nickol
-my my
-wefwefwefwef
-wefwef
-AGAIN?
-  mooo
-HIIIIIIII
-IIeIl
-
-ANARCHY IN THE UK!
-
-0_0

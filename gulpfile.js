@@ -11,7 +11,9 @@ gutil= require('gulp-util'),
 browserify= require('browserify'),
 gsourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', ['assets', 'javascript'])
+
+gulp.task('default', ['assets', 'javascript', 'server', 'watch']);
+
 gulp.task('assets', function () {
   // var assets = gulp.src('client/{css,img}/**')
   //   .pipe(gulp.dest('./.tmp'));
@@ -28,7 +30,7 @@ gulp.task('assets', function () {
 })
 
 gulp.task('watch', function(){
- gulp.watch('client/index.html', ['assets']);
+  gulp.watch('client/index.html', ['assets']);
 });
 
 gulp.task('test', function(done) {
@@ -38,10 +40,14 @@ gulp.task('test', function(done) {
     }, done);
 });
 
+
+
+
 gulp.task('reset', function (callback) {
 
   rimraf('./.tmp', callback);
 });
 
+require('./tasks/server')(gulp);
 require('./tasks/browserify')(gulp);
 require('./tasks/test')(gulp);
